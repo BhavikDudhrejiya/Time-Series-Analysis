@@ -1,5 +1,7 @@
 # Time-Series-Analysis
 
+# Introduction to Time Series Analysis
+
 **What is Time Series ?**
 - A time series is a sequence of data being recorded at a specific time intervals.
 
@@ -89,5 +91,64 @@
 - Auto Covariance = 0 There is no correlation
 
 **Why it is required to find white noise ?**
-- Because if the observations are in white noise are uncorrelated and independent and hence it is very hard to predict.
+- Because if the observations have white noise are uncorrelated and independent hence it is very hard to predict.
 
+# Methods of Time Series Analysis
+
+# Simple Moving Average
+
+**What is Simple Moving Average ?**
+- Simple Moving Average is calculated by adding observations for last K time periods in time series and divide that sum by K.
+- Formula: Ft+1=(Yt+Yt-1+Yt-2+Yt-3+……Yt-K+1)/K.
+- Equal weightage is given to all observations in last K periods.
+- Smaller the value of K, the greater weight is given to each period.
+- Short term simple moving average responds quickly to changes in the time series.
+- Greater the value of K, the smaller weight is given to each period.
+- Long term simple moving average are comparably slow to react.
+- Drawback: Exact same weight to the selected period, What happened yesterday have a different.
+
+**What is Weighted Moving Average ?**
+- A weight is assigned to each term to be averaged. 
+- These particular weights signifies the relative importance of each term on the average. 
+- The sum of all the associated weights should be equal to 1.
+- Formula: Ft+1=(Wt*Yt+Wt-1*Yt-1+Wt-2*Yt-2+Wt-3*Yt-3+……Wt-k+1*Yt-K+1)
+- Wt-Weight assigned to Sales in time period t
+- Yt- Actual Sales in time period t
+- Higher the weight associated with the recent terms, quicker the response to the change in time series happen to the forecasted output.
+
+# Exponential Smoothing
+
+**What is Exponential Smoothing ?**
+- Exponential smoothing is simply an adjustment technique which takes the previous period's forecast, and adjusts it up or down based on what actually occurred in that period
+- Recent observations are given relatively more weight in forecasting than the older observations.
+- Exponentially decreasing weights as the observation get older.
+- Removing much of the “noise”.
+
+**What is Single Exponential Smoothing ?**
+- It is a Simple Exponential Smoothing. 
+- It is used when data does not have trend and seasonality.
+- It is require single parameter called Alpha α.
+
+**What is Apha ? or What is a Hyperparameters of SES ?**
+- It is a smoothing factor or smoothing coefficient.
+- This parameter controls the rate at which the influence of the observations at prior time steps decay(loss) exponentially.
+- Alpha lie in 0 and 1 so that a part of difference between previous and predicted can be updated.
+- If Alpha is close to 1 then it has less smoothing effect and give greater weight to the recent changes in data(pays attention mainly to the most recent past observations).
+- If Alpha is close to 0 then it has greater smoothing effect and less responsive to recent changes in data(More of the history is taken into account ).
+- Formula: Predictive Value + Alpha(Actual Value - Predictive Value)
+
+**What is Double Exponential Smoothing ?**
+- Double Exponential Smoothing is an extension to Exponential Smoothing that explicitly adds support for trends in the univariate time series. 
+- It is also called Holt ES.
+- It has a two parameters, Alpha & Beta.
+- Alpha use for data smoothing parameter and Beta use for trend Smoothing Parameter.
+- Beta control the decay of the influence of the change in trend.
+
+**What is Triple Exponential Smoothing**
+- Triple Exponential Smoothing is an extension of Exponential Smoothing that explicitly adds support for seasonality to the univariate time series. 
+- It is also called Holt Winters ES. 
+- It require three parameter Alpha α , Beta β, Gamma y & Phi.
+- Alpha use for data smoothing parameter (Controls Levels).
+- Beta use for trend smoothing parameter(Controls Trend component).
+- Gamma use for seasonal smothing parameter(Control Seasonal component.
+It require two parameter Alpha α and Beta β
