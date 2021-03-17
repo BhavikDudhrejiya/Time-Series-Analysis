@@ -151,4 +151,20 @@
 - Alpha use for data smoothing parameter (Controls Levels).
 - Beta use for trend smoothing parameter(Controls Trend component).
 - Gamma use for seasonal smothing parameter(Control Seasonal component.
-It require two parameter Alpha α and Beta β
+
+# Stationarity or Stationary Time Series
+
+**What is Stationarity ?**
+- Stationarity is the property of exhibiting constant statistical properties (mean, variance, autocorrelation, etc.). 
+- If the mean of a time-series increases over time, then it’s not stationary.
+- Mean, Variance and Covariance remain unchanged. 
+- There should not be upward or down wards.
+
+**Types of Stationarity**
+- **Strictly Stationarity**: 
+  - A random process whose joint distribution doesn't change over time. 
+  - If the joint distribution of the time series process remain same (Unchange) overtime  it is called strict stationarity.
+- **Weakly Stationarity**: 
+  - Mean and the variance are not constant through time. 
+  - They keep changing with time. 
+  - It is also known as covariance stationarity.
