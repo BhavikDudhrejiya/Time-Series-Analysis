@@ -168,3 +168,19 @@
   - Mean and the variance are not constant through time. 
   - They keep changing with time. 
   - It is also known as covariance stationarity.
+
+#Auto Regressive Model
+
+**What is Auto Regressive Model ?**
+- It is an AR model predicts future behavior based on past behavior.
+- It is an example of stochastic process(Stochastic - having a random probability distribution or pattern that may be analysed statistically but may not be predicted precisely).
+- Yt depends only on its own past values AR(p) in which p is a Past Value
+- An AR(p) model is an autoregressive model where specific lagged values of yt are used as predictor variables. 
+- The value for “p” is called the order.
+- Formula: Yt = B0 + B1*Yt-1 + B2*Yt-2 +…..Bp*Yt-p + Et
+
+**What is Past Values ?**
+- Past Values yt-1, yt-2, yt-3, Et-……………..So on.
+
+**What is Auto ?**
+- When the value from a time series is regressed on previous values from that same time series 
